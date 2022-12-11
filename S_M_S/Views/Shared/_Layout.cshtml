@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Main</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/Assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Assets/dist/css/adminlte.min.css">
+    <!-- DataTable -->
+    <link href="@Url.Content("~/Content/dataTables.bootstrap4.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/jquery-ui.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/bootstrap-select.min.css")" rel="stylesheet" />
+    @RenderSection("styles", required: false)
+
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+    @Html.Partial("_Navbar")
+    @Html.Partial("_Sidebar")
+
+    @RenderBody()
+
+
+    <!-- jQuery -->
+    <script src="~/Assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Assets/dist/js/adminlte.min.js"></script>
+    <!-- DataTable -->
+    <script src="@Url.Content("~/Scripts/jquery.noty.packaged.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.noty.packaged.min.js")"></script>
+
+
+    <script src="@Url.Content("~/Scripts/jquery.dataTables.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/dataTables.bootstrap4.min.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery-ui.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrap-select.min.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/canvasjs.min.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/PrintReport.js")"></script>
+    <script src="@Url.Content("~/Scripts/printThis.js")"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
