@@ -13,5 +13,29 @@
   </EntityType>
   <EntityContainer Name="SchoolDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Sessions" EntityType="SchoolDBModel.Session" />
+    <EntitySet Name="Teachers" EntityType="SchoolDBModel.Teacher" />
   </EntityContainer>
+  <EntityType Name="Session">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SessionName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Create_Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TeacherName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Start_Time" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="End_Time" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Byte" Nullable="false" />
+    <Property Name="Create_Date" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
 </Schema>

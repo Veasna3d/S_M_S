@@ -18,7 +18,6 @@ namespace S_M_S.Models
         public SchoolDBEntities()
             : base("name=SchoolDBEntities")
         {
-            this.Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -27,5 +26,7 @@ namespace S_M_S.Models
         }
     
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Session> Sessions { get; set; }
+        public virtual DbSet<Teacher> Teachers { get; set; }
     }
 }

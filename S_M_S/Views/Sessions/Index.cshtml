@@ -1,0 +1,66 @@
+﻿@model S_M_S.Models.Session
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="content-wrapper">
+    <div class="content mt-5 pt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-primary card-outline">
+                        <div class="card-header">
+                            <h5>List User Info</h5>
+                        </div>
+                        <div class="m-2">
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" onclick="addNew()">AddNew</button>
+                        </div>
+                        <div class="card-body">
+                            <table id="table_data" class="table table-striped table-bordered"></table>
+
+                            <!-- Modal -->
+                            <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">User Form</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                @Html.LabelFor(model => model.SessionName)
+                                                @Html.EditorFor(model => model.SessionName, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+     
+                                        </div>
+                                        <div class="modal-footer">
+                                            <input type="button" id="btnsave" value="Save" class="btn btn-primary" onclick="saveData()" />
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/Session_CRUD.js"></script>
+}
+
+
