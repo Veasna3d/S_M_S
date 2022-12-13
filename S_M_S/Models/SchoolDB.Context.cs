@@ -28,5 +28,7 @@ namespace S_M_S.Models
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Session> Sessions { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
+        public virtual DbSet<Class> Classes { get; set; }
+        public virtual DbSet<Subject> Subjects { get; set; }
     }
 }

@@ -6,8 +6,10 @@
     <edmx:Diagrams>
       <Diagram DiagramId="4a0516838c2b4e7fb3a3a11fe79c3549" Name="Diagram1">
         <EntityTypeShape EntityType="SchoolDBModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SchoolDBModel.Session" Width="1.5" PointX="3.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SchoolDBModel.Teacher" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="SchoolDBModel.Session" Width="1.5" PointX="2.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SchoolDBModel.Teacher" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SchoolDBModel.Class" Width="1.5" PointX="4" PointY="0.75" />
+        <EntityTypeShape EntityType="SchoolDBModel.Subject" Width="1.5" PointX="5.625" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -128,12 +128,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClassesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SessionsController.cs" />
+    <Compile Include="Controllers\SubjectsController.cs" />
     <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Class.cs">
+      <DependentUpon>SchoolDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SchoolDB.Context.cs">
       <AutoGen>True</AutoGen>
@@ -151,6 +156,9 @@
       <DependentUpon>SchoolDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Session.cs">
+      <DependentUpon>SchoolDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Subject.cs">
       <DependentUpon>SchoolDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Teacher.cs">
@@ -2106,7 +2114,9 @@
       <DependentUpon>SchoolDB.edmx</DependentUpon>
       <LastGenOutput>SchoolDB.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\Class_CRUD.js" />
     <Content Include="Scripts\Session_CRUD.js" />
+    <Content Include="Scripts\Subject_CRUD.js" />
     <Content Include="Scripts\Teacher_CRUD.js" />
     <Content Include="Scripts\User_CRUD.js" />
     <Content Include="Scripts\bootstrap-select.min.js" />
@@ -2294,6 +2304,8 @@
     <Content Include="Views\Users\Login.cshtml" />
     <Content Include="Views\Sessions\Index.cshtml" />
     <Content Include="Views\Teachers\Index.cshtml" />
+    <Content Include="Views\Classes\Index.cshtml" />
+    <Content Include="Views\Subjects\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
