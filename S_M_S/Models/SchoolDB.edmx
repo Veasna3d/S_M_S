@@ -11,7 +11,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SessionName" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Create_Date" Type="date" />
+          <Property Name="Create_Date" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
         <EntityType Name="Teacher">
           <Key>
@@ -19,12 +19,12 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TeacherName" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Image" Type="varchar" MaxLength="255" />
-          <Property Name="Start_Time" Type="date" Nullable="false" />
+          <Property Name="Image" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Start_Time" Type="date" />
           <Property Name="Phone" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="Email" Type="varchar" MaxLength="55" />
+          <Property Name="Email" Type="varchar" MaxLength="55" Nullable="false" />
           <Property Name="End_Time" Type="date" />
-          <Property Name="Status" Type="tinyint" Nullable="false" />
+          <Property Name="Status" Type="tinyint" />
           <Property Name="Create_Date" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
@@ -69,7 +69,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SessionName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Create_Date" Type="DateTime" Precision="0" />
+          <Property Name="Create_Date" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityType Name="Teacher">
           <Key>
@@ -77,12 +77,12 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TeacherName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="Start_Time" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Image" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Start_Time" Type="DateTime" Precision="0" />
           <Property Name="Phone" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="55" FixedLength="false" Unicode="false" />
           <Property Name="End_Time" Type="DateTime" Precision="0" />
-          <Property Name="Status" Type="Byte" Nullable="false" />
+          <Property Name="Status" Type="Byte" />
           <Property Name="Create_Date" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
         </EntityType>
       </Schema>

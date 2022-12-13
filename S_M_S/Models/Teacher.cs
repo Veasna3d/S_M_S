@@ -17,11 +17,11 @@ namespace S_M_S.Models
         public int Id { get; set; }
         public string TeacherName { get; set; }
         public string Image { get; set; }
-        public System.DateTime Start_Time { get; set; }
+        public Nullable<System.DateTime> Start_Time { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
         public Nullable<System.DateTime> End_Time { get; set; }
-        public byte Status { get; set; }
+        public Nullable<byte> Status { get; set; }
         public byte[] Create_Date { get; set; }
     }
 }

@@ -16,6 +16,6 @@ namespace S_M_S.Models
     {
         public int Id { get; set; }
         public string SessionName { get; set; }
-        public Nullable<System.DateTime> Create_Date { get; set; }
+        public byte[] Create_Date { get; set; }
     }
 }

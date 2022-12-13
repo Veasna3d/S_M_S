@@ -92,7 +92,7 @@ namespace S_M_S.Controllers
             if (result != null)
             {
                 Session["user"] = result;
-                return RedirectToAction("Index", "Users");
+                return RedirectToAction("Index", "Homes");
             }
             else
             {
